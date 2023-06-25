@@ -20,8 +20,12 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>Hello, I'm Keisuke. I'm a president of SYSTEMI and an software engineer.</p>
+      <section className={utilStyles.heading}>
+        <p>こんにちは。見つかりましたね。久しぶりにBlogでも書くか、、と思い作りました🤣なんかちょこちょこ思いついたことを書いていきます。取り止めのない話を書いているだけですが、読んで気になることがあったらTwitterででも教えてください笑。なお、このWebサイトの内容は全て個人的な意見であり、会社や法人の意見を代表するものでありません。念の為🙇🏻‍♂️</p>
+        <ul>
+          <li><a href={'https://github.com/kuzukawa/'} target={'_blank'}>Github</a></li>
+          <li><a href={'https://twitter.com/kkuzu'} target={'_blank'}>Twitter</a></li>
+        </ul>
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

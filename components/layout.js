@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Keisuke Kuzukawa';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Lukewarm coffee';
 
 export default function Layout({ children, home }) {
   return (
@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="tech and hobby blog site using next.js"
         />
         <meta
           property="og:image"
@@ -28,33 +28,36 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
+            <h1 className={utilStyles.headingXl}>Lukewarm Coffee</h1>
+            <span>by</span>
+            <h3 className={utilStyles.headingMd}>{name}</h3>
             <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              height={48}
+              width={48}
               alt=""
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+
           </>
         ) : (
           <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
             <h2 className={utilStyles.headingLg}>
               <Link href="/" className={utilStyles.colorInherit}>
                 {name}
               </Link>
             </h2>
+            <Link href="/">
+              <Image
+                priority
+                src="/images/profile.jpg"
+                className={utilStyles.borderCircle}
+                height={48}
+                width={48}
+                alt=""
+              />
+            </Link>
           </>
         )}
       </header>
