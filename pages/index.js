@@ -36,7 +36,7 @@ export default function Home({ allPostsData }) {
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
-                <Date dateString='2020-01-01' />
+                <Date dateString={date} />
               </small>
             </li>
             ))}
